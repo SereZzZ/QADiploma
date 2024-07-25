@@ -1,6 +1,6 @@
 # Отчет по автоматизации тестирования
 Проведено автоматизированное тестирование функционала оплаты тура, по составленному
- [плану](https://github.com/yalosyash/qa-diploma/blob/main/docs/Plan.md). Отчётные документы предоставлены в папке [Report.md](https://github.com/yalosyash/qa-diploma/blob/main/docs/Report.md).
+ [плану](https://github.com/SereZzZ/QADiploma/blob/main/docs/Plan.md). Отчётные документы предоставлены в папке [Report.md](https://github.com/SereZzZ/QADiploma/blob/main/docs/Report.md).
 
 ## Сработавшие риски
 1. ##### Отсутствие документации по должной и правильной работе продукта:
