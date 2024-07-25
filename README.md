@@ -19,9 +19,9 @@
 
 #### Техническая часть
 
-Само приложение расположено в файле [aqa-shop.jar]() и запускается на порту 8080.
+Само приложение расположено в файле [aqa-shop.jar](https://github.com/SereZzZ/QADiploma/tree/main/artifacts) и запускается на порту 8080.
 
-В файле [application.properties]() приведены настройки:
+В файле [application.properties](https://github.com/SereZzZ/QADiploma/blob/main/application.properties) приведены настройки:
 
 * учётные данные для подключения к СУБД
 * URL-адреса банковских сервисов.
@@ -37,7 +37,7 @@
 
 Разработчики подготовили симулятор банковских сервисов, который может принимать запросы в нужном формате и генерировать ответы.
 
-Симулятор написан на Node.js, расположен в каталоге [gate-simulator]() и запускается на порту 9999. Он позволяет генерировать предопределённые ответы для заданного набора карт. Набор карт представлен в формате JSON в файле [data.json](https://github.com/Akir800/QA_Diploma/blob/master/gate-simulator/data.json).
+Симулятор написан на Node.js, расположен в каталоге [gate-simulator](https://github.com/SereZzZ/QADiploma/tree/main/gate-simulator) и запускается на порту 9999. Он позволяет генерировать предопределённые ответы для заданного набора карт. Набор карт представлен в формате JSON в файле [data.json](https://github.com/Akir800/QA_Diploma/blob/master/gate-simulator/data.json).
 
 Данный сервис симулирует Payment Gate и Credit Gate.
 
@@ -49,16 +49,20 @@
 
 #### Процедура запуска автотестов
 
-1. Скачать код репозитория командой **git clone https://github.com/**
+1. Скачать код репозитория командой **git clone https://github.com/SereZzZ/QADiploma**
 2. Запустить Docker Desktop
 3. Открыть проект в IDEA
 4. Выполнить команду в терминале **docker-compose up**
 5. Выполнить команду во второй вкладке терминала:
-* для запуска работы с БД MySQL - **java -jar ./artifacts/aqa-shop.jar --spring.datasource.url=jdbc:mysql://localhost:3306/app**
-* для запуска работы с БД PostgreSQL - **java -jar ./artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app**
+* для запуска работы с БД MySQL:
+* **java -jar ./artifacts/aqa-shop.jar --spring.datasource.url=jdbc:mysql://localhost:3306/app**
+* для запуска работы с БД PostgreSQL:
+* **java -jar ./artifacts/aqa-shop.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/app**
 6. Открыть консоль двойным нажатие Ctrl и запустить тесты командой:
-* при работе с MySQL - **./gradlew clean test -Dapp=jdbc:mysql://localhost:3306/app**
-* при работе с PostgreSQL - **./gradlew clean test -Dapp=jdbc:postgresql://localhost:5432/app**
+* при работе с MySQL:
+* **./gradlew clean test -Dapp=jdbc:mysql://localhost:3306/app**
+* при работе с PostgreSQL:
+* **./gradlew clean test -Dapp=jdbc:postgresql://localhost:5432/app**
 7. Для формирования отчета Allure выполнить в консоли команду **./gradlew allureServe**
 8. Завершить работу SUT:
 * в открытом терминале сочетанием клавиш **Ctrl+C**
